@@ -4,12 +4,12 @@ from django.db import models
 
 #用户
 class Users(models.Model):
-    uname=models.CharField(max_length=20)
+    uname=models.CharField(max_length=20,)
     upwd=models.CharField(max_length=20)
     #学院
-    ucollege=models.CharField(max_length=20,null=True,blank=True)
-    unum=models.CharField(max_length=10,null=False,blank=True)
-    uemail=models.EmailField(null=False,blank=True)
+    ucollege=models.CharField(max_length=20)
+    unum=models.CharField(max_length=10)
+    uemail=models.EmailField()
 
     def __str__(self):
         return self.uname
